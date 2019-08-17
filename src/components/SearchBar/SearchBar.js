@@ -35,6 +35,10 @@ handleSortByChange(sortByOption){
   this.setState({
     sortBy : sortByOption
   });
+  if(this.state.term){
+    console.log(this.state.term);
+    this.props.searchYelp(this.state.term, this.state.location, this.state.sortBy);
+  }
 
 }
 
